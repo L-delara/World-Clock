@@ -13,40 +13,44 @@
       href="https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap"
       rel="stylesheet"
     />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
     <link rel="stylesheet" href="./src/styles.css" />
     <title>World Clock ⌚</title>
   </head>
   <body>
     <div class="container">
       <h1>World Clock</h1>
-      <select>
+      <select id="choose-city">
         <option value="">-Choose a Destination-</option>
-        <option value="">London</option>
-        <option value="">Tokyo</option>
-        <option value="">New York</option>
+        <option value="current">Home</option>
+        <option value="Asia/Tokyo">Tokyo</option>
+        <option value="Australia/Melbourne">Melbourne</option>
+        
+        <option value="Europe/London">London</option>
+       <option value="America/Sao_Paulo">Sao Paulo</option>
+        <option value="America/New_York">New York</option>
+        <option value="America/Los_Angeles">Los Angeles</option>
+        <option value="Pacific/Honolulu">Honolulu</option>
       </select>
+
       <div class="places">
-        <div class="city">
+        <div class="cities">
           <div>
-            <h2>Los Angeles</h2>
+            <h2 id="cityName">Berlin</h2>
             <div class="date">April 1st, 2145</div>
           </div>
-          <div class="time">11:11 <small>PM</small></div>
-        </div>
-
-        <div class="city">
-          <div>
-            <h2>Berlin</h2>
-            <div class="date">April 2nd, 2145</div>
+          <div class="time">
+            11:11 <small>PM</small>
           </div>
-          <div class="time">7:30 <small>AM</small></div>
         </div>
       </div>
     </div>
     <footer>
-      Coded by Ligia De Lara with SheCodes. An
-      <a href="https://github.com/L-delara/World-Clock" target="_blank"
-        >open-source project on GitHub</a
+      Coded by Ligia De Lara with SheCodes.<br />
+      An
+      <a href="https://github.com/L-delara/World-Clock" target="_blank"></a>
+        open-source project on GitHub</a
       >.
     </footer>
     <script src="./src/index.js"></script>
