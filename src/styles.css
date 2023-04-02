@@ -59,10 +59,10 @@ a:hover {
 }
 .date {
   opacity: 0.75;
-  size: 16px;
+  size: 14px;
 }
 .time {
-  font-size: 35px;
+  font-size: 30px;
   margin-right: 15px;
 }
 .time small {
