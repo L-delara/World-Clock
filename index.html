@@ -12,32 +12,33 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap"
       rel="stylesheet"
-    />
+    />    
+    <link rel="stylesheet" href="./src/styles.css" />
      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
-    <link rel="stylesheet" href="./src/styles.css" />
+
     <title>World Clock ⌚</title>
   </head>
   <body>
     <div class="container">
       <h1>World Clock</h1>
+
       <select id="choose-city">
         <option value="">-Choose a Destination-</option>
         <option value="current">Home</option>
         <option value="Asia/Tokyo">Tokyo</option>
         <option value="Australia/Melbourne">Melbourne</option>
-        
         <option value="Europe/London">London</option>
-       <option value="America/Sao_Paulo">Sao Paulo</option>
+        <option value="America/Sao_Paulo">Sao Paulo</option>
         <option value="America/New_York">New York</option>
         <option value="America/Los_Angeles">Los Angeles</option>
         <option value="Pacific/Honolulu">Honolulu</option>
       </select>
 
       <div class="places">
-        <div class="cities">
+        <div class="cities" id="lisbon">
           <div>
-            <h2 id="city-name"></h2>
+            <h2 id="city-name">Lisbon</h2>
             <div class="date"></div>
           </div>
 
@@ -46,7 +47,9 @@
 
         </div>
       </div>
+      
     </div>
+
     <footer>
       Coded by Ligia De Lara with SheCodes.<br />
       An
@@ -56,4 +59,4 @@
     </footer>
     <script src="./src/index.js"></script>
   </body>
-</html>
+</html> 

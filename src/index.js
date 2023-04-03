@@ -1,10 +1,10 @@
 function updateTime() {
   //change city html
-  let cityElement = document.querySelector("#cityName");
+  let cityElement = document.querySelector("#lisbon");
   if (cityElement) {
     let dateElement = cityElement.querySelector(".date");
     let timeElement = cityElement.querySelector(".time");
-    let createdTime = moment.tz.setDefault();
+    let createdTime = moment().tz("Europe/Lisbon");
 
     dateElement.innerHTML = createdTime.format("MMMM	Do YYYY");
     timeElement.innerHTML = createdTime.format(
@@ -13,7 +13,7 @@ function updateTime() {
   }
 }
 
-//change the city once it's been selected
+//change the city/date/time once it's been selected
 function updateCity(event) {
   let cityTimeZone = event.target.value;
   if (cityTimeZone === "current") {
@@ -24,19 +24,22 @@ function updateCity(event) {
   let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector(".cities");
   citiesElement.innerHTML = `
-  <div class=">
+  <div>
     <div>
-      <h2 id="city-name">${cityName}</h2>
+      <h2>${cityName}</h2>
       <div class="date">${cityTime.format("MMMM	Do YYYY")}</div>
     </div>
     <div class="time">${cityTime.format(
       "h:mm:ss"
-    )} <small>${cityTime.format("A")}</small></div>
+    )} <small>${cityTime.format("A")}
+    </small></div>
   </div>
   `;
 }
+
 updateTime();
-setInterval(updateTime, 1);
+setInterval(updateTime, 1000);
+
 //event listener on the selector
 let citySelect = document.querySelector("#choose-city");
 citySelect.addEventListener("change", updateCity);
