@@ -32,6 +32,7 @@ footer {
   padding-top: 10px;
   font-size: 12px;
 }
+
 a:hover {
   text-decoration: none;
   font-size: 13px;
@@ -45,7 +46,7 @@ a:hover {
   border-radius: 7px;
   box-shadow: 5px 5px 5px 5px rgba(33, 28, 58, 0.25);
 }
-.cities {
+.city {
   max-width: 75%;
   display: flex;
   justify-content: space-between;
@@ -54,12 +55,12 @@ a:hover {
   border-radius: 5px;
   border: 1px solid #000;
 }
-.places {
+#cities {
   padding-bottom: 20px;
 }
 .date {
   opacity: 0.75;
-  size: 14px;
+  size: 12px;
 }
 .time {
   font-size: 30px;
